@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <title>IPomg - Find your IP, hostname, geolocation, and more!</title>
+  </head>
+  <body class="relative min-h-screen">
+    <!-- HERO -->
+    <div id="hero" class="relative bg-gradient-to-br from-green-300 to-yellow-100">
+      <!-- HEADER -->
+      <header id="navbar" class="text-white w-full z-10">
+        <nav class="flex">
+          <div class="flex-1 font-display text-5xl text-shadow-lg ml-4 mt-4 sm:ml-12 md:ml-20 lg:ml-[10%] xl:ml-[20%]">
+            <h1>IPomg</h1>
+          </div>
+          <div class="flex mr-4 mt-4 sm:mr-12 md:mr-20 lg:mr-[10%] xl:mr-[20%]">
+            <a href="#" class="inline-block my-auto pt-2 rounded-md font-sans font-bold text-white text-shadow-lg underline text-lg">
+              how it's made
+            </a>
+          </div>
+        </nav>
+      </header>
+      <div class="h-60 md:h-[26rem]"></div>
+      <!-- HERO TEXT -->
+      <div class="hidden absolute bg-white h-64 rounded-md shadow-lg z-10 md:block md:left-[10%] md:top-24 md:w-[50%] xl:left-[20%] xl:w-[37%]">
+        <h2 class="mt-6 mb-2 text-green-300 text-2xl text-center font-bold">
+          What is an IP address?
+        </h2>
+        <p class="mt-4 text-gray-700 text-center text-lg mx-auto max-w-[76%] h-1/2">
+          An Internet Protocol address <span class="whitespace-nowrap">(IP address)</span> is a numerical label 
+          assigned to each device connected to a computer network that 
+          uses the Internet Protocol for communication.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/IP_address" target="_blank" class="hidden underline text-gray-700 text-lg text-center lg:block">
+          Learn more (Wikipedia)
+        </a>
+      </div>
+      <!-- NETWORK INFO CARD -->
+      <div class="network-info-card">
+        <h2 class="mt-6 mb-2 text-green-300 text-2xl text-center font-bold">Network Info</h2>
+        <!-- IP ADDRESS CONTAINER -->
+        <div id="ip-container" class="gradient-border-container mb-2 flex-grow">
+          <div class="gradient-border-container__inner">
+            <h3 class="gradient-border-container__inner__title">IP Address</h3>
+            <div class="gradient-border-container__inner__info">
+              <span class="gradient-border-container__inner__info__load">
+                <svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" fill="#6ee7b7">
+                  <circle cx="15" cy="15" r="15">
+                      <animate attributeName="r" from="15" to="15"
+                               begin="0s" dur="0.8s"
+                               values="15;9;15" calcMode="linear"
+                               repeatCount="indefinite" />
+                      <animate attributeName="fill-opacity" from="1" to="1"
+                               begin="0s" dur="0.8s"
+                               values="1;.5;1" calcMode="linear"
+                               repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="60" cy="15" r="9" fill-opacity="0.3">
+                      <animate attributeName="r" from="9" to="9"
+                               begin="0s" dur="0.8s"
+                               values="9;15;9" calcMode="linear"
+                               repeatCount="indefinite" />
+                      <animate attributeName="fill-opacity" from="0.5" to="0.5"
+                               begin="0s" dur="0.8s"
+                               values=".5;1;.5" calcMode="linear"
+                               repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="105" cy="15" r="15">
+                      <animate attributeName="r" from="15" to="15"
+                               begin="0s" dur="0.8s"
+                               values="15;9;15" calcMode="linear"
+                               repeatCount="indefinite" />
+                      <animate attributeName="fill-opacity" from="1" to="1"
+                               begin="0s" dur="0.8s"
+                               values="1;.5;1" calcMode="linear"
+                               repeatCount="indefinite" />
+                  </circle>
+              </svg>
+              </span>
+              <span class="gradient-border-container__inner__info__text loading"></span>
+              <button class="gradient-border-container__inner__info__btn-copy loading">
+                Copy
+              </button>
+              <span class="gradient-border-container__inner__info__text-reload">
+                Failed to load...
+              </span>
+              <button class="gradient-border-container__inner__info__btn-reload">
+                Reload
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- HOSTNAME CONTAINER -->
+        <div id="hostname-container" class="gradient-border-container mb-6 flex-grow">
+          <div class="gradient-border-container__inner">
+            <h3 class="gradient-border-container__inner__title">Hostname</h3>
+            <div class="gradient-border-container__inner__info">
+              <span class="gradient-border-container__inner__info__load">
+                <svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" fill="#6ee7b7">
+                  <circle cx="15" cy="15" r="15">
+                      <animate attributeName="r" from="15" to="15"
+                               begin="0s" dur="0.8s"
+                               values="15;9;15" calcMode="linear"
+                               repeatCount="indefinite" />
+                      <animate attributeName="fill-opacity" from="1" to="1"
+                               begin="0s" dur="0.8s"
+                               values="1;.5;1" calcMode="linear"
+                               repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="60" cy="15" r="9" fill-opacity="0.3">
+                      <animate attributeName="r" from="9" to="9"
+                               begin="0s" dur="0.8s"
+                               values="9;15;9" calcMode="linear"
+                               repeatCount="indefinite" />
+                      <animate attributeName="fill-opacity" from="0.5" to="0.5"
+                               begin="0s" dur="0.8s"
+                               values=".5;1;.5" calcMode="linear"
+                               repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="105" cy="15" r="15">
+                      <animate attributeName="r" from="15" to="15"
+                               begin="0s" dur="0.8s"
+                               values="15;9;15" calcMode="linear"
+                               repeatCount="indefinite" />
+                      <animate attributeName="fill-opacity" from="1" to="1"
+                               begin="0s" dur="0.8s"
+                               values="1;.5;1" calcMode="linear"
+                               repeatCount="indefinite" />
+                  </circle>
+              </svg>
+              </span>
+              <span class="gradient-border-container__inner__info__text loading"></span>
+              <button class="gradient-border-container__inner__info__btn-copy loading">
+                Copy
+              </button>
+              <span class="gradient-border-container__inner__info__text-reload">
+                Failed to load...
+              </span>
+              <button class="gradient-border-container__inner__info__btn-reload">
+                Reload
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom-shape-divider-bottom-1623674465">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+      </div>
+    </div>
+    <!-- MAIN -->
+    <main class="mt-20 pb-20 mx-auto w-4/5 md:mt-8 xl:w-3/5">
+      <!-- DOCS -->
+      <h2 class="text-2xl font-bold text-green-300">Docs</h2>
+      <p class="mt-2 text-gray-700 md:text-lg">
+        There are four endpoints for programmatic access with no limits on usage - 
+        unless the server bill costs more than $100/mo <span class="whitespace-nowrap text-base">(╯°□°)╯︵ ┻━┻.</span>
+      </p>
+      <section class="api-examples">
+        <div class="flex-1 flex flex-col mr-8">
+          <h3>API URL</h3>
+          <span>https://api.ipomg.com/text</span>
+          <span>https://api.ipomg.com/json</span>
+          <span>https://api.ipomg.com/hn-text</span>
+          <span>https://api.ipomg.com/hn-json</span>
+        </div>
+        <div class="flex-1 flex flex-col mr-8">
+          <h3 class="mx-auto">Response Type</h3>
+          <span class="mx-auto">text</span>
+          <span class="mx-auto">json</span>
+          <span class="mx-auto">text</span>
+          <span class="mx-auto">json</span>
+        </div>
+        <div class="flex-1 flex flex-col">
+          <h3 >Sample Output</h3>
+          <span>192.168.1.1</span>
+          <span>{ 'ip': '192.168.1.1' }</span>
+          <span>192.168.1.1</span>
+          <span>{ 'hostname': '192.168.1.1' }</span>
+        </div>
+      </section>
+      <!-- STATISTICS -->
+      <h2 class="mt-6 text-2xl font-bold text-green-300">Stats</h2>
+      <p class="mt-2 text-gray-700 md:text-lg">
+        At some point, there will be usage statistics here - either a snapshot updated daily or a live chart.
+      </p>
+    </main>
+    <!-- FOOTER -->
+    <footer class="absolute mb-4 whitespace-nowrap">
+      <a href="https://sunpla.sh">
+        <span class="pr-1">🏖️ 🌅</span>
+        <span href="#" class="text-yellow-400 font-bold underline">made by sunspla.sh</span>
+        <span class="pl-1">🌅 🏖️</span>
+      </a>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

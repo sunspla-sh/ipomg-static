@@ -1,0 +1,171 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.network-info-card {
+  @apply bg-white w-4/5 h-64 rounded-md shadow-lg z-10 absolute top-24 left-[10%] flex flex-col;
+}
+
+.gradient-border-container {
+  &__inner {
+    @apply px-4 pt-4 relative;
+    &__title{
+      @apply absolute z-10 bg-white top-1 text-green-300 font-bold tracking-wide px-2;
+      left: 10%
+    }
+    &__info {
+      @apply rounded-md h-12 m-auto py-6 px-4 relative flex items-center box-border bg-white;
+      max-width: 22rem;
+      background-clip: padding-box;
+      border: solid 5px transparent;
+      border-radius: 1rem;
+      &:before {
+        @apply absolute top-0 right-0 bottom-0 left-0;
+        content: "";
+        z-index: -1;
+        margin: -5px;
+        border-radius: inherit;
+        background: linear-gradient(to bottom right, #6EE7B7, #FEF3C7);
+      }
+      &__load {
+        @apply mx-auto;
+      }
+      &__load.done {
+        @apply hidden;
+      }
+      &__text {
+        @apply w-[90%] text-center text-gray-500 font-bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &__text.loading {
+        @apply hidden;
+      }
+      &__btn-copy{
+        @apply z-10 py-2 px-2.5 text-green-300 font-bold hover:bg-green-100 hover:rounded-full;
+      }
+      &__btn-copy.loading {
+        @apply hidden;
+      }
+      &__text-reload {
+        @apply hidden w-[90%] text-center text-red-500 font-bold;
+      }
+      &__text-reload.fail {
+        @apply inline;
+      }
+      &__btn-reload {
+        @apply hidden z-10 py-2 px-2.5 text-gray-500 font-bold hover:bg-green-100 hover:rounded-full;;
+      }
+      &__btn-reload.fail {
+        @apply inline;
+      }
+    }
+  }
+}
+
+.api-examples {
+  @apply mt-6 mx-auto p-4 w-[80vw] border-2 rounded-md border-gray-200 flex overflow-x-scroll whitespace-nowrap text-gray-700 md:text-lg;
+}
+
+.api-examples h3 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.api-examples span {
+  margin-bottom: 0.5rem;
+}
+
+footer{
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 480px) {
+  .gradient-border-container {
+    &__inner {
+      &__title {
+        left: 20%;
+      }
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .gradient-border-container {
+    &__inner {
+      &__title {
+        left: 25%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .network-info-card {
+    @apply max-w-[26.66%] left-[unset] right-[10%];
+  }
+}
+
+/* @media (min-width: 1024px) {
+  
+} */
+
+@media (min-width: 1280px) {
+  .network-info-card {
+    @apply w-[20%] right-[20%];
+  }
+  .api-examples {
+    @apply w-full;
+  }
+}
+
+/* HERO BACKGROUND - shapedivider.app */
+.custom-shape-divider-bottom-1623674465 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1623674465 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 83px;
+}
+
+.custom-shape-divider-bottom-1623674465 .shape-fill {
+  fill: #FFFFFF;
+}
+
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-1623674465 svg {
+      width: calc(143% + 1.3px);
+      height: 83px;
+  }
+}
+
+/* END HERO BACKGROUND - shapedivider.app */
+
+/* TEXT SHADOW UTILITIES */
+.text-shadow-sm{
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.text-shadow-md{
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.text-shadow-lg{
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.text-shadow-xl{
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}

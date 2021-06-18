@@ -1,0 +1,19 @@
+domains:
+- domain: ipomg.com
+  type: PRIMARY
+  zone: ipomg.com
+name: ipomg-static
+region: nyc
+static_sites:
+- build_command: npm run build
+  environment_slug: node-js
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: sunspla-sh/ipomg-static
+  name: ipomg-static
+  routes:
+  - path: /
+  source_dir: /
+#file for use with doctl to allocate digital ocean
+#resources from the command line

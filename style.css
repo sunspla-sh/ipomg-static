@@ -34,7 +34,7 @@
         @apply hidden;
       }
       &__text {
-        @apply w-[90%] text-center text-gray-500 font-bold;
+        @apply w-[90%] text-center text-gray-500 font-bold whitespace-nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
       }

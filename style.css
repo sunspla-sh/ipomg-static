@@ -64,7 +64,8 @@
 }
 
 .api-examples {
-  @apply mt-6 mx-auto p-4 w-[80vw] border-2 rounded-md border-gray-200 flex overflow-x-scroll whitespace-nowrap text-gray-700 md:text-lg;
+  @apply my-6 mx-auto p-4 w-full rounded-md flex overflow-x-scroll whitespace-nowrap text-gray-700 md:text-lg;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);  
 }
 
 .api-examples h3 {
@@ -75,6 +76,18 @@
 
 .api-examples span {
   margin-bottom: 0.5rem;
+}
+
+.how-card {
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+.how-images {
+  /* @apply min-h-[160px] */
+}
+
+.how-text {
+  @apply p-6 text-justify;
 }
 
 footer{

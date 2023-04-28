@@ -90,6 +90,15 @@
   @apply p-6 text-justify;
 }
 
+.gitboxdraw-logo {
+  padding: 0 1.5rem;
+}
+
+.commandlinecartography-logo {
+  height: 80px;
+  width: 80px;
+}
+
 footer{
   left: 50%;
   bottom: 0;
